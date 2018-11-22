@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Photogur</title>
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+</head>
+<body class="application_body">
+
+  <header>
+    <div>
+    <a href="/pictures/" class="header_home_btn">Photo<span>gur</span></a>
+
+    <% if current_user %>
+      <%= link_to "New Picture", new_picture_path, class: "new_pic_btn" %>
+    <% end %>
+    </div>
+
+    <p class="login_signup">
+      <% if current_user %>
+        Signed in as <span><%= current_user.email %></span> <%= link_to "Log out", session_path("current"), class: "logout_btn", :method => :delete %>
+      <% else %>
+        <%= link_to "Log in", new_session_path, class: "login_btn" %><%= link_to "Sign up", new_user_path, class: "signup_btn" %>
+      <% end %>
+    </p>
+  </header>
+
+  <main>
+    <%= yield %>
+  </main>
+
+  <footer></footer>
+
+</body>
+</html>

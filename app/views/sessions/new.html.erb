@@ -1,0 +1,12 @@
+<p>- login -</p>
+
+<br />
+
+<%= form_for :session, url: sessions_path do |f| %>
+
+  <%= render "shared/user_form", f: f %>
+
+  <%= link_to "need an account?", new_user_path, class: "signup_btn" %>
+  <%= f.submit "Login" %>
+
+<% end %>

@@ -1,0 +1,29 @@
+<div class="img_nav">
+
+  <% if @previous_picture %>
+    <%= link_to "<", picture_path(@previous_picture) %>
+  <% else %>
+    <p></p>
+  <% end %>
+
+  <% if @next_picture %>
+    <%= link_to "Next Post >", picture_path(@next_picture) %>
+  <% else %>
+    <%= link_to "<< First Post", picture_path(@last_picture) %>
+  <% end %>
+
+</div>
+
+<div class="picture_full">
+  <div class="picture_title">
+    <h2><%= @picture.title %></h2>
+    <p><span>by: </span><%= @picture.artist %></p>
+  </div>
+  <img src="<%= @picture.url %>">
+</div>
+
+<div class="edit_delete_btn">
+  <% if current_user && @picture.user_id == current_user.id %>
+  <%= link_to "Edit", edit_picture_url(@picture) %><%= link_to("Delete", picture_path(@picture), method: :delete, data: {confirm: "Are you sure you want to delete this picture?"})  %>
+  <% end %>
+</div>

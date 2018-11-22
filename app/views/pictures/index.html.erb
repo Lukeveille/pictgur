@@ -1,0 +1,18 @@
+<h1 class="welcome">Welcome to Photo<span>gur</span>!</h1>
+
+<div class="picture_index">
+
+  <% @newest_first.each do |picture| %>
+    <div class="picture_box">
+      <div class="img_wrap">
+        <%= link_to image_tag(picture.url, border: 0), picture_path(picture) %>
+        <h5><%= picture.title %></h5>
+      </div>
+    </div>
+  <% end %>
+
+</div>
+
+<% @month_old.each do |picture| %>
+  
+<% end %>

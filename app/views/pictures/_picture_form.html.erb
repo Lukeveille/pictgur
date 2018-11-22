@@ -1,0 +1,23 @@
+<%= form_for(picture) do |f| %>
+  <p>
+    <% f.label :artist %>
+    <%= f.text_field :artist, placeholder: "Artist" %>
+  </p>
+  <p>
+    <% f.label :title %>
+    <%= f.text_field :title, placeholder: "Title" %>
+  </p>
+  <p>
+    <% f.label :url %>
+    <%= f.text_field :url, placeholder: "URL" %>
+  </p>
+  <p>
+    <%= f.submit "Save" %>
+  </p>
+<% end %>
+
+<% if picture.errors.any? %>
+  <% picture.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+  <% end %>
+<% end %>
