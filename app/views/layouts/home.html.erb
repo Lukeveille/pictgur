@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Photogur</title>
+  <title>Pictgur</title>
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
@@ -10,7 +10,7 @@
 
   <header>
     <div>
-    <a href="/pictures/" class="header_home_btn">Photo<span>gur</span></a>
+    <a href="/pictures/" class="header_home_btn">Pict<span>gur</span></a>
 
     <% if current_user %>
       <%= link_to "New Picture", new_picture_path, class: "new_pic_btn" %>
