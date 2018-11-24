@@ -38,7 +38,7 @@ img {
 .edit_delete_btn a {
   color: #FFF;
   text-decoration: none;
-  font-size: .8em;
+  font-size: 1em;
   margin: 0 0.5em;
   padding: .6em;
   border-radius: 5px;
@@ -101,12 +101,13 @@ img {
   display: inline-block;
   box-shadow: 0 1px 5px #111;
 }
-.picture_box img{
-width: 300px;
+.img_wrap{
+width: 240px;
 }
 
 .picture_box h5 {
   padding: 0.5em 0 1em 0;
+  word-wrap: break-word;
 }
 .picture_title {
   padding: 0.8em 0;

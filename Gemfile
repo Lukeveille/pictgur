@@ -27,6 +27,13 @@ gem 'bcrypt', '~> 3.1.7'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
+# for aws cloud storage
+gem 'fog'
+# photo resizing
+gem "mini_magick"
+# file upload solution
+gem 'carrierwave'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

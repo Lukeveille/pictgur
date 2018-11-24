@@ -16,6 +16,11 @@
   </p>
 <% end %>
 
+<%= form_for picture, :html => {:multipart => true} do |f| %>
+    Upload Picture
+    <%= f.file_field :url %>
+<% end %>
+
 <% if picture.errors.any? %>
   <% picture.errors.full_messages.each do |message| %>
     <li><%= message %></li>

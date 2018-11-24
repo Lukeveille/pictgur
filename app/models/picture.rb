@@ -7,6 +7,8 @@ class Picture < ApplicationRecord
 
   validates :url, presence: true, uniqueness: true
 
+  mount_uploader :url, PictureUploader
+
   def self.newest_first
     Picture.order("created_at DESC")
   end
